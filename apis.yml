@@ -1,8 +1,35 @@
 aid: palmhr
-name: Palmhr
-description: Palmhr is a company surfaced as a portfolio company of speedinvest and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+name: Palm HR
+description: >-
+  Palm HR (palm.hr, operating on palmhr.net) is an HR management and payroll
+  platform built specifically for the UAE and broader MENA region, trusted by
+  organizations from startups to enterprises for local labor-law and WPS
+  compliance. The platform spans people management (employee profiles,
+  onboarding and offboarding, document management), attendance and time
+  tracking (mobile check-in/out, timesheets, shift scheduling, project time),
+  payroll automation (WPS-compliant processing, expenses, loans, multi-country
+  and multi-currency), performance management, and recruiting, plus an
+  outsourced-HR service. Palm HR exposes REST APIs with API keys carrying
+  granular permissions so customers can push data to ERPs and external tools,
+  and ships prebuilt integrations with accounting suites (Xero, QuickBooks,
+  Zoho Books, Dynamics 365, NetSuite, Wafeq, Qoyod, Odoo, Tally), biometric
+  devices (ZKTeco, CAMS), and automation platforms (Zapier, Make, Power
+  Automate). The company is a portfolio company of Speedinvest. This profile
+  was enriched from public web surfaces; no public OpenAPI specification or
+  developer portal was discovered.
 url: https://raw.githubusercontent.com/api-evangelist/palmhr/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://palmhr.net/apple-touch-icon.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,12 +38,62 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- HR
+- Human Resources
+- Payroll
+- Attendance
+- Performance Management
+- Recruiting
+- WPS
+- UAE
+- MENA
+apis:
+- name: Palm HR API
+  description: >-
+    Palm HR REST API surface (api.palm.hr). Customers create API keys with
+    granular permissions to push HR, attendance, and payroll data to ERPs and
+    external tools. No public OpenAPI specification or developer documentation
+    was discovered at the time of enrichment.
+  humanURL: https://palmhr.net/en/integrations
+  baseURL: https://api.palm.hr
+  properties:
+  - type: Integrations
+    url: https://palmhr.net/en/integrations
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: VulnerabilityDisclosure
+  url: security/palmhr-vulnerability-disclosure.yml
+- type: Security
+  url: https://palmhr.net/.well-known/security.txt
+- type: DomainSecurity
+  url: security/palmhr-domain-security.yml
+- type: Website
+  url: https://palmhr.net/en
+- type: Login
+  url: https://palmhr.net/en/login
+- type: Pricing
+  url: https://palmhr.net/en/pricing
+- type: TermsOfService
+  url: https://palmhr.net/en/terms
+- type: PrivacyPolicy
+  url: https://palmhr.net/en/privacy
+- type: HelpCenter
+  url: https://palmhr.crisp.help/en/
+- type: Integrations
+  url: https://palmhr.net/en/integrations
+- type: SecurityTxt
+  url: well-known/palmhr-security.txt
+- type: WellKnown
+  url: well-known/palmhr-well-known.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 4
+  pass: local-v1
